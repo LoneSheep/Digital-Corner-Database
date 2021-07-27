@@ -80,6 +80,5 @@ app.get("/",(req,res)=>{
     return res.redirect('index.html');
 })
 
-app.listen(process.env.PORT || 3000,()=>{
-    console.log('accuired port number is '+ port)
+app.listen(process.env.PORT || 3000)
 })
