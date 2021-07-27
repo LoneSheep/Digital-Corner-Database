@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 
-const port =process.env.port || 3000
 const app = express();
 
 app.use(bodyParser.json())
@@ -82,6 +81,5 @@ app.get("/",(req,res)=>{
     return res.redirect('index.html');
 })
 
-app.listen(port,()=>{
-    console.log('accuired port number is '+ port)
+app.listen(process.env.PORT || 3000)
 })
